@@ -1,0 +1,22 @@
+# ignore emacs temp file
+*~
+
+# ignore .log file
+*.log
+
+# ignore .test binary
+*.test 
+
+# ignore profile data
+prof.out
+
+# ignore html 
+*.html
+
+# ignore _test.go file for now
+*_test.go
+
+# ignore GTAGS
+GPATH
+GTAGS
+GRTAGS

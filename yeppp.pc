@@ -1,0 +1,10 @@
+prefix=/opt/yeppp
+includedir=${prefix}/library/headers
+libdir=${prefix}/binaries/linux/x86_64
+
+Name: yeppp
+Description: Yeppp! SIMD-optimized mathematical library 
+Version: 1.0.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lyeppp
+
