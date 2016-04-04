@@ -1,6 +1,6 @@
 # GoYeppp!
 
-GoYeppp is a binding for [Yeppp!](http://www.yeppp.info/) high-performance SIMD-optimized mathematical library.
+GoYeppp is a bindings for [Yeppp!](http://www.yeppp.info/) high-performance SIMD-optimized mathematical library.
 
 ## Requirements
 
