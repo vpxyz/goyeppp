@@ -6,13 +6,13 @@ GoYeppp is a bindings for [Yeppp!](http://www.yeppp.info/) high-performance SIMD
 
 The Yeppp! library and [pkgconfig](http://pkgconfig.freedesktop.org).
 
-Customize the pkgconfig config file (yeppp.pc) and then copy into the pkgconfig configurations directory (tipically /usr/lib64/pkgconfig or /usr/lib/pkgconfig)
+Customize the pkgconfig config file (yeppp.pc), and then copy into the pkgconfig configurations directory (tipically /usr/lib64/pkgconfig or /usr/lib/pkgconfig)
 
 ## Install
 
 This package is "go-gettable", just do:
 
-    github.com/vpxyz/goyeppp
+    go get -u github.com/vpxyz/goyeppp
 
 
 ## Example

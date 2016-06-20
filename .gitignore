@@ -14,7 +14,7 @@ prof.out
 *.html
 
 # ignore _test.go file for now
-*_test.go
+# *_test.go
 
 # ignore GTAGS
 GPATH
