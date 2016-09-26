@@ -12,8 +12,7 @@ Customize the pkgconfig config file (yeppp.pc), and then copy into the pkgconfig
 
 This package is "go-gettable", just do:
 
-    go get -u github.com/vpxyz/goyeppp
-
+    go get -u github.com/vpxyz/goyeppp/...
 
 ## Example
 
