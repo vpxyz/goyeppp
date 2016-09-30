@@ -97,7 +97,7 @@ const (
 	// YepCpuVendorIBM International Business Machines Corporation. Vendor of PowerPC processor microarchitectures.
 	YepCpuVendorIBM
 
-	// YepCpuVendorMotorola	Motorola, Inc. Vendor of PowerPC and ARM processor microarchitectures.
+	// YepCpuVendorMotorola Motorola Inc. Vendor of PowerPC and ARM processor microarchitectures.
 	YepCpuVendorMotorola
 
 	// YepCpuVendorPASemi P. A. Semi. Vendor of PowerPC processor microarchitectures.
