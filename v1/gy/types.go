@@ -19,7 +19,7 @@ type Yep32u uint32
 // Yep64u 64-bit unsigned integer type
 type Yep64u uint64
 
-// Yep8 8-bit signed integer type
+// Yep8s 8-bit signed integer type
 type Yep8s int8
 
 // Yep16s 16-bit signed integer type

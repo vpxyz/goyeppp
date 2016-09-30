@@ -258,7 +258,7 @@ func SumSquaresV64fS64f(v []Yep64f) (Yep64f, YepStatus) {
 	return sumSquares, status
 }
 
-// DotProductV32fV32fS32f Computes the dot product of two vectors of single precision (32-bit) floating-point elements. x and y must have same lenght
+// DotProductV32fV32fS32f Computes the dot product of two vectors of single precision (32-bit) floating-point elements. x and y must have same length
 func DotProductV32fV32fS32f(x, y []Yep32f) (Yep32f, YepStatus) {
 	if len(x) != len(y) {
 		return 0, YepStatusInvalidArgument
@@ -276,7 +276,7 @@ func DotProductV32fV32fS32f(x, y []Yep32f) (Yep32f, YepStatus) {
 	return dp, status
 }
 
-// DotProductV64fV64fS64f Computes the dot product of two vectors of double precision (64-bit) floating-point elements. x and y must have same lenght
+// DotProductV64fV64fS64f Computes the dot product of two vectors of double precision (64-bit) floating-point elements. x and y must have same length
 func DotProductV64fV64fS64f(x, y []Yep64f) (Yep64f, YepStatus) {
 	if len(x) != len(y) {
 		return 0, YepStatusInvalidArgument

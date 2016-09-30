@@ -37,28 +37,28 @@ const (
 	// YepCpuVendorTransmeta Transmeta Corporation. Vendor of x86 processor microarchitectures.
 	YepCpuVendorTransmeta
 
-	// YepCpuVendorCyrix	Cyrix Corporation. Vendor of x86 processor microarchitectures.
+	// YepCpuVendorCyrix Cyrix Corporation. Vendor of x86 processor microarchitectures.
 	YepCpuVendorCyrix
 
-	// YepCpuVendorRise	Rise Technology. Vendor of x86 processor microarchitectures.
+	// YepCpuVendorRise Rise Technology. Vendor of x86 processor microarchitectures.
 	YepCpuVendorRise
 
 	// YepCpuVendorNSC National Semiconductor. Vendor of x86 processor microarchitectures.
 	YepCpuVendorNSC
 
-	// YepCpuVendorSiS	Silicon Integrated Systems. Vendor of x86 processor microarchitectures.
+	// YepCpuVendorSiS Silicon Integrated Systems. Vendor of x86 processor microarchitectures.
 	YepCpuVendorSiS
 
-	// YepCpuVendorNexGen	NexGen. Vendor of x86 processor microarchitectures.
+	// YepCpuVendorNexGen NexGen. Vendor of x86 processor microarchitectures.
 	YepCpuVendorNexGen
 
-	// YepCpuVendorUMC	United Microelectronics Corporation. Vendor of x86 processor microarchitectures.
+	// YepCpuVendorUMC United Microelectronics Corporation. Vendor of x86 processor microarchitectures.
 	YepCpuVendorUMC
 
-	// YepCpuVendorRDC	RDC Semiconductor Co., Ltd. Vendor of x86 processor microarchitectures.
+	// YepCpuVendorRDC RDC Semiconductor Co., Ltd. Vendor of x86 processor microarchitectures.
 	YepCpuVendorRDC
 
-	// YepCpuVendorDMP	DM&P Electronics Inc. Vendor of x86 processor microarchitectures.
+	// YepCpuVendorDMP DM&P Electronics Inc. Vendor of x86 processor microarchitectures.
 	YepCpuVendorDMP
 
 	/* ARM Cpus */
@@ -66,7 +66,7 @@ const (
 	// YepCpuVendorARM ARM Holdings plc. Vendor of ARM processor microarchitectures.
 	YepCpuVendorARM
 
-	// YepCpuVendorMarvell	Marvell Technology Group Ltd. Vendor of ARM processor microarchitectures.
+	// YepCpuVendorMarvell Marvell Technology Group Ltd. Vendor of ARM processor microarchitectures.
 	YepCpuVendorMarvell
 
 	// YepCpuVendorQualcomm Qualcomm Incorporated. Vendor of ARM processor microarchitectures.
@@ -83,7 +83,7 @@ const (
 
 	/* MIPS Cpus */
 
-	// YepCpuVendorIngenic	Ingenic Semiconductor. Vendor of MIPS processor microarchitectures.
+	// YepCpuVendorIngenic Ingenic Semiconductor. Vendor of MIPS processor microarchitectures.
 	YepCpuVendorIngenic
 
 	// YepCpuVendorICT Institute of Computing Technology of the Chinese Academy of Sciences. Vendor of MIPS processor microarchitectures.
@@ -111,7 +111,7 @@ const (
 	// YepCpuVendorOracle Oracle Corporation. Vendor of SPARC processor microarchitectures.
 	YepCpuVendorOracle
 
-	// YepCpuVendorFujitsu	Fujitsu Limited. Vendor of SPARC processor microarchitectures. */
+	// YepCpuVendorFujitsu Fujitsu Limited. Vendor of SPARC processor microarchitectures. */
 	YepCpuVendorFujitsu
 
 	// YepCpuVendorMCST Moscow Center of SPARC Technologies CJSC. Vendor of SPARC processor microarchitectures. */
@@ -122,7 +122,7 @@ const (
 type YepCpuArchitecture int
 
 const (
-	// YepCpuArchitectureUnknown	Instruction set architecture is not known to the library. */
+	// YepCpuArchitectureUnknown Instruction set architecture is not known to the library. */
 	YepCpuArchitectureUnknown = iota
 
 	// YepCpuArchitectureX86 x86 or x86-64 ISA.
@@ -133,13 +133,14 @@ const (
 
 	// YepCpuArchitectureMIPS MIPS ISA.
 	YepCpuArchitectureMIPS
+
 	// YepCpuArchitecturePowerPC PowerPC ISA.
 	YepCpuArchitecturePowerPC
 
 	// YepCpuArchitectureIA64 IA64 ISA.
 	YepCpuArchitectureIA64
 
-	// YepCpuArchitectureSPARC	SPARC ISA.
+	// YepCpuArchitectureSPARC SPARC ISA.
 	YepCpuArchitectureSPARC
 )
 
@@ -147,7 +148,7 @@ const (
 type YepCpuMicroarchitecture int
 
 const (
-	// YepCpuMicroarchitectureUnknown Microarchitecture is unknown, or the library failed to get information about the microarchitecture from OS */
+	// YepCpuMicroarchitectureUnknown Microarchitecture is unknown, or the library failed to get information about the microarchitecture from OS
 	YepCpuMicroarchitectureUnknown YepCpuMicroarchitecture = 0
 
 	// YepCpuMicroarchitectureP5 Pentium and Pentium MMX microarchitecture.
@@ -234,7 +235,7 @@ const (
 	// YepCpuMicroarchitectureSteamroller AMD Steamroller microarchitecture (3rd gen K15).
 	YepCpuMicroarchitectureSteamroller = (YepCpuArchitectureX86 << 24) + (YepCpuVendorAMD << 16) + 0x000B
 
-	/** @brief DEC/Intel StrongARM processors. */
+	// YepCpuMicroarchitectureStrongARM DEC/Intel StrongARM processors.
 	YepCpuMicroarchitectureStrongARM = (YepCpuArchitectureARM << 24) + (YepCpuVendorIntel << 16) + 0x0001
 
 	// YepCpuMicroarchitectureXScale Intel/Marvell XScale processors.

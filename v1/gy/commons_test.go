@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	vLength = 1024 * 1024 // test vector lenght
+	vLength = 1024 * 1024 // test vector length
 )
 
 func checkStatus(status YepStatus) {

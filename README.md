@@ -2,6 +2,8 @@
 
 GoYeppp is a bindings for [Yeppp!](http://www.yeppp.info/) high-performance SIMD-optimized mathematical library.
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/vpxyz/goyeppp)](https://goreportcard.com/report/github.com/vpxyz/goyeppp)
+
 ## Requirements
 
 The Yeppp! library and [pkgconfig](http://pkgconfig.freedesktop.org).
