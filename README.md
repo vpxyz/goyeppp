@@ -22,7 +22,7 @@ This package is "go-gettable", just do:
 package main
 
 import (
-	"github.com/vpxyz/goyeppp/v1/gy"
+	gy "github.com/vpxyz/goyeppp"
 	"log"
 	"math/rand"
 )
