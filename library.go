@@ -1,5 +1,5 @@
 // Package gy Yeppp! library binding
-package gy
+package goyeppp
 
 /*
 #include <yepLibrary.h>
