@@ -1,7 +1,6 @@
 package goyeppp
 
 import (
-	"log"
 	"math"
 	"math/rand"
 	"testing"
@@ -191,7 +190,8 @@ func TestPolynomial(t *testing.T) {
 	gyRelease()
 
 	maxError := maxPolynomialError(naive, yepppRes)
-	log.Printf("Polynomial max error = %g", maxError)
+
+	t.Logf("Polynomial max error = %g", maxError)
 }
 
 func BenchmarkPolynomial(b *testing.B) {
@@ -232,7 +232,7 @@ func BenchmarkNaiveEntropy(b *testing.B) {
 		}
 	}
 
-	log.Printf("BenchmarkNaiveEntropy Entropy: %g\n", entropy)
+	b.Logf("BenchmarkNaiveEntropy Entropy: %g\n", entropy)
 }
 
 func BenchmarkEntroy(b *testing.B) {
@@ -268,6 +268,5 @@ func BenchmarkEntroy(b *testing.B) {
 		}
 	}
 	gyRelease()
-	log.Printf("BenchmarkEntropy Entropy: %g\n", entropy)
-
+	b.Logf("BenchmarkEntropy Entropy: %g\n", entropy)
 }
