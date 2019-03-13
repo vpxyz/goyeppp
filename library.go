@@ -307,7 +307,7 @@ func Init() (YepStatus, error) {
 	status := YepStatus(C.yepLibrary_Init())
 
 	if status == YepStatusSystemError {
-		return status, errors.New("An uncoverable error inside the OS kernel occurred during library initialization.")
+		return status, errors.New("an uncoverable error inside the OS kernel occurred during library initialization")
 	}
 
 	return status, nil
@@ -318,7 +318,7 @@ func Release() (YepStatus, error) {
 	status := YepStatus(C.yepLibrary_Release())
 
 	if status == YepStatusSystemError {
-		return status, errors.New("The library failed to release some of the resources due to a failed call to the OS kernel.")
+		return status, errors.New("the library failed to release some of the resources due to a failed call to the OS kernel")
 	}
 
 	return status, nil
@@ -331,7 +331,7 @@ func CPUIsaFeatures() (uint64, YepStatus, error) {
 	status := YepStatus(C.yepLibrary_GetCpuIsaFeatures((*C.Yep64u)(unsafe.Pointer(&isaFeatures))))
 
 	if status == YepStatusNullPointer {
-		return isaFeatures, status, errors.New("The isaFeatures is null.")
+		return isaFeatures, status, errors.New("the isaFeatures is null")
 	}
 
 	return isaFeatures, status, nil
@@ -345,7 +345,7 @@ func CPUSimdFeatures() (uint64, YepStatus, error) {
 	status := YepStatus(C.yepLibrary_GetCpuIsaFeatures((*C.Yep64u)(unsafe.Pointer(&smdFeatures))))
 
 	if status == YepStatusNullPointer {
-		return smdFeatures, status, errors.New("The smdFeatures is null.")
+		return smdFeatures, status, errors.New("the smdFeatures is null")
 	}
 
 	return smdFeatures, status, nil
@@ -359,7 +359,7 @@ func CPUSystemFeatures() (uint64, YepStatus, error) {
 	status := YepStatus(C.yepLibrary_GetCpuSystemFeatures((*C.Yep64u)(unsafe.Pointer(&cpuFeatures))))
 
 	if status == YepStatusNullPointer {
-		return cpuFeatures, status, errors.New("The systemFeatures is null.")
+		return cpuFeatures, status, errors.New("the systemFeatures is null")
 	}
 
 	return cpuFeatures, status, nil
@@ -371,7 +371,7 @@ func (cm *YepCpuMicroarchitecture) CPUMicroarchitecture() (YepStatus, error) {
 	status := YepStatus(C.yepLibrary_GetCpuMicroarchitecture((*C.enum_YepCpuMicroarchitecture)(unsafe.Pointer(cm))))
 
 	if status == YepStatusNullPointer {
-		return status, errors.New("The microarchitecture is null.")
+		return status, errors.New("the microarchitecture is null")
 	}
 
 	return status, nil
@@ -432,17 +432,17 @@ func (ec *YepEnergyCounter) EnergyCounterAcquire(ct YepEnergyCounterType) (YepSt
 
 	switch status {
 	case YepStatusNullPointer:
-		return status, errors.New("The microarchitecture is null.")
+		return status, errors.New("the microarchitecture is null")
 	case YepStatusInvalidArgument:
-		return status, errors.New("The ct type parameter does not specify a valid energy counter type.")
+		return status, errors.New("the ct type parameter does not specify a valid energy counter type")
 	case YepStatusUnsupportedHardware:
-		return status, errors.New("The hardware does not support the requested energy counter type.")
+		return status, errors.New("the hardware does not support the requested energy counter type")
 	case YepStatusUnsupportedSoftware:
-		return status, errors.New("The operating system does not provide access to the specified energy counter.")
+		return status, errors.New("the operating system does not provide access to the specified energy counter")
 	case YepStatusSystemError:
-		return status, errors.New("An attempt to read the energy counter or release the OS resources failed inside the OS kernel.")
+		return status, errors.New("an attempt to read the energy counter or release the OS resources failed inside the OS kernel")
 	case YepStatusAccessDenied:
-		return status, errors.New("The user does not possess the required access rights to read the energy counter.")
+		return status, errors.New("the user does not possess the required access rights to read the energy counter")
 	}
 
 	return status, nil

@@ -2,7 +2,6 @@ package goyeppp
 
 import (
 	"math"
-	"math/rand"
 	"testing"
 )
 
@@ -133,8 +132,6 @@ func init() {
 
 	checkStatus(status)
 
-	// TODO spostare qui la generazione dell'array di random da usare per l'entropia, deve essere comune alle due routine di benchmark
-
 	gyRelease()
 
 }
@@ -214,21 +211,12 @@ func BenchmarkNaivePolynomial(b *testing.B) {
 
 func BenchmarkNaiveEntropy(b *testing.B) {
 
-	x := make([]float64, arraySize)
-
-	r := rand.New(rand.NewSource(5330))
-
-	for i := 0; i < arraySize; i++ {
-		x[i] = r.Float64()
-	}
-
-	b.ResetTimer() // discard initialization time
-	var entropy float64
+	var entropy Yep64f
 	for j := 0; j < b.N; j++ {
 		entropy = 0.0
 		for i := arraySize - 1; i != 0; i-- {
 			p := x[i]
-			entropy -= (p * math.Log(p))
+			entropy -= (p * Yep64f(math.Log(float64(p))))
 		}
 	}
 
@@ -236,18 +224,9 @@ func BenchmarkNaiveEntropy(b *testing.B) {
 }
 
 func BenchmarkEntroy(b *testing.B) {
-	x := make([]Yep64f, arraySize)
-
-	r := rand.New(rand.NewSource(5330))
-
-	for i := 0; i < arraySize; i++ {
-		x[i] = Yep64f(r.Float64())
-	}
 
 	blockSize := 1024
 	blockLength := 0
-
-	b.ResetTimer() // discard initialization time
 
 	gyInit()
 
